@@ -38,4 +38,9 @@ public class UserController {
         return userService.addUser(user);
     }
 
+    @PostMapping("/update") // 处理GET请求到/users/
+    public int updateUser(@RequestBody User user) {
+        return userService.updateUser(user);
+    }
+
 }

@@ -20,4 +20,9 @@ public interface UserMapper {
     // 使用完整的User对象作为参数
     @Insert("INSERT INTO user(name, age) VALUES(#{name}, #{age})")
     int insertUser(User user);
+
+
+    // 使用完整的User对象作为参数
+    @Insert("UPDATE user SET name = #{name},age = #{age} WHERE id = #{id}")
+    int updateUser(User user);
 }

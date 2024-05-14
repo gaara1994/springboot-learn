@@ -24,4 +24,8 @@ public class UserService {
         return userMapper.insertUser(user);
     }
 
+    public int updateUser(User user){
+        return userMapper.updateUser(user);
+    }
+
 }
