@@ -12,7 +12,12 @@ public interface UserMapper {
     @Select("SELECT * FROM user")
     List<User> getAllUsers();
 
-    // 查询所有用户
+    // 根據id查询用户
     @Select("SELECT * FROM user WHERE id = #{id}")
     User getUserById(@Param("id") Long id);
+
+    // 插入新用户
+    // 使用完整的User对象作为参数
+    @Insert("INSERT INTO users(name, age) VALUES(#{name}, #{age})")
+    int insertUser(User user);
 }
