@@ -11,4 +11,8 @@ public interface UserMapper {
     // 查询所有用户
     @Select("SELECT * FROM user")
     List<User> getAllUsers();
+
+    // 查询所有用户
+    @Select("SELECT * FROM user WHERE id = #{id}")
+    User getUserById(@Param("id") Long id);
 }
