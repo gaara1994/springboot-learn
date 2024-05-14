@@ -18,6 +18,6 @@ public interface UserMapper {
 
     // 插入新用户
     // 使用完整的User对象作为参数
-    @Insert("INSERT INTO users(name, age) VALUES(#{name}, #{age})")
+    @Insert("INSERT INTO user(name, age) VALUES(#{name}, #{age})")
     int insertUser(User user);
 }
