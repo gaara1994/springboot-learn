@@ -43,4 +43,9 @@ public class UserController {
         return userService.updateUser(user);
     }
 
+    @GetMapping("/delete/{id}") // 处理GET请求到/users/
+    public int deleteUser(@PathVariable Long id) {
+        return userService.deleteUserById(id);
+    }
+
 }

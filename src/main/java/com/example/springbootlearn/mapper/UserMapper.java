@@ -12,9 +12,13 @@ public interface UserMapper {
     @Select("SELECT * FROM user")
     List<User> getAllUsers();
 
-    // 根據id查询用户
+    // 根据id查询用户
     @Select("SELECT * FROM user WHERE id = #{id}")
     User getUserById(@Param("id") Long id);
+
+    // 根据id删除用户
+    @Delete("DELETE FROM user WHERE id = #{id}")
+    int deleteUserById(@Param("id") Long id);
 
     // 插入新用户
     // 使用完整的User对象作为参数

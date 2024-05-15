@@ -20,6 +20,13 @@ public class UserService {
         return userMapper.getUserById(id);
     }
 
+    public int deleteUserById(Long id){
+        //1.查询是否存在
+
+        //2.执行删除
+        return userMapper.deleteUserById(id);
+    }
+
     public int addUser(User user){
         return userMapper.insertUser(user);
     }
